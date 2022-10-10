@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+    <head>
+        <meta charset="utf-8">
+        <title>sudoku</title>
+        <style>
+            td{
+                width: 50px;
+                height: 50px;
+                text-align: center;
+                border: 1px solid black;
+            }
+            .dl{
+                border-bottom: 1px solid black;
+            }
+            .pr{
+                border-right: 1px solid black;
+            }
+            input{
+                width: 45px;
+                height: 45px;
+                border: none;
+                text-align: center;
+                font-size: x-large;
+            }
+            #s2{
+                font-size: 150%;
+                width: auto;
+                height: auto;
+            }
+            .tr21{
+                border-bottom: 3px solid black;
+            }
+            table{
+                border-collapse: collapse;
+            }
+            .lwb{
+                border-right: 3px solid black;
+            }
+        </style>
+        <script>
+        function sprawdz(){
+        var tab=[
+                ["7", "5", "6", "8", "3", "2", "1", "9", "4"],
+                ["2", "9", "3", "4", "1", "5", "7", "8", "6"],
+                ["1", "4", "8", "6", "9", "7", "5", "2", "3"],
+                ["3", "8", "1", "7", "5", "4", "9", "6", "2"],
+                ["6", "7", "4", "3", "2", "9", "8", "5", "1"],
+                ["5", "2", "9", "1", "6", "8", "3", "4", "7"],
+                ["4", "6", "7", "9", "8", "1", "2", "3", "5"],
+                ["9", "1", "2", "5", "4", "3", "6", "7", "8"],
+                ["8", "3", "5", "2", "7", "6", "4", "1", "9"],
+
+        ];
+var p1=document.getElementById("p1").value;
+var p2=document.getElementById("p2").value;
+var p3=document.getElementById("p3").value;
+var p4=document.getElementById("p4").value;
+var p5=document.getElementById("p5").value;
+var p6=document.getElementById("p6").value;
+var p7=document.getElementById("p7").value;
+var p8=document.getElementById("p8").value;
+var p9=document.getElementById("p9").value;
+var p10=document.getElementById("p10").value;
+var p11=document.getElementById("p11").value;
+var p12=document.getElementById("p12").value;
+var p13=document.getElementById("p13").value;
+var p14=document.getElementById("p14").value;
+var p15=document.getElementById("p15").value;
+var p16=document.getElementById("p16").value;
+var p17=document.getElementById("p17").value;
+var p18=document.getElementById("p18").value;
+var p19=document.getElementById("p19").value;
+var p20=document.getElementById("p20").value;
+var p21=document.getElementById("p21").value;
+var p22=document.getElementById("p22").value;
+var p23=document.getElementById("p23").value;
+var p24=document.getElementById("p24").value;
+var p25=document.getElementById("p25").value;
+var p26=document.getElementById("p26").value;
+var p27=document.getElementById("p27").value;
+var p28=document.getElementById("p28").value;
+var p29=document.getElementById("p29").value;
+var p30=document.getElementById("p30").value;
+var p31=document.getElementById("p31").value;
+var p32=document.getElementById("p32").value;
+var p33=document.getElementById("p33").value;
+var p34=document.getElementById("p34").value;
+var p35=document.getElementById("p35").value;
+var p36=document.getElementById("p36").value;
+var p37=document.getElementById("p37").value;
+var p38=document.getElementById("p38").value;
+var p39=document.getElementById("p39").value;
+var p40=document.getElementById("p40").value;
+var p41=document.getElementById("p41").value;
+var p42=document.getElementById("p42").value;
+var p43=document.getElementById("p43").value;
+var p44=document.getElementById("p44").value;
+var p45=document.getElementById("p45").value;
+var p46=document.getElementById("p46").value;
+var p47=document.getElementById("p47").value;
+var p48=document.getElementById("p48").value;
+var p49=document.getElementById("p49").value;
+var p50=document.getElementById("p50").value;
+var p51=document.getElementById("p51").value;
+var p52=document.getElementById("p52").value;
+var p53=document.getElementById("p53").value;
+var p54=document.getElementById("p54").value;
+var p55=document.getElementById("p55").value;
+            if(p1==(tab[0][0])){
+                    document.getElementById('p1').style.backgroundColor='green';
+                }
+                else{
+                    document.getElementById('p1').style.backgroundColor='red';
+                }
+            if(p2==(tab[0][1])){
+                    document.getElementById('p2').style.backgroundColor='green';
+                }
+                else{
+                    document.getElementById('p2').style.backgroundColor='red';
+                }
+            if(p3==(tab[0][2])){
+                    document.getElementById('p3').style.backgroundColor='green';
+                }
+                else{
+                    document.getElementById('p3').style.backgroundColor='red';
+                }
+
+            if(p4==(tab[0][6])){
+                    document.getElementById('p4').style.backgroundColor='green';
+                }
+                else{
+                    document.getElementById('p4').style.backgroundColor='red';
+                }
+            if(p5==(tab[0][8])){
+                    document.getElementById('p5').style.backgroundColor='green';
+                }
+                else{
+                    document.getElementById('p5').style.backgroundColor='red';
+                }
+            if(p6==(tab[1][0])){
+                    document.getElementById('p6').style.backgroundColor='green';
+                }
+                else{
+                    document.getElementById('p6').style.backgroundColor='red';
+                }
+            if(p7==(tab[1][1])){
+                    document.getElementById('p7').style.backgroundColor='green';
+                }
+                else{
+                    document.getElementById('p7').style.backgroundColor='red';
+                }
+            if(p8==(tab[1][2])){
+                    document.getElementById('p8').style.backgroundColor='green';
+                }
+                else{
+                    document.getElementById('p8').style.backgroundColor='red';
+                }
+            if(p9==(tab[1][3])){
+                    document.getElementById('p9').style.backgroundColor='green';
+                }
+                else{
+                    document.getElementById('p9').style.backgroundColor='red';
+                }
+            if(p10==(tab[1][4])){
+                    document.getElementById('p10').style.backgroundColor='green';
+                }
+                else{
+                    document.getElementById('p10').style.backgroundColor='red';
+                }
+            if(p11==(tab[1][7])){
+                    document.getElementById('p11').style.backgroundColor='green';
+                }
+                else{
+                    document.getElementById('p11').style.backgroundColor='red';
+                }
+            if(p12==(tab[2][1])){
+                    document.getElementById('p12').style.backgroundColor='green';
+                }
+                else{
+                    document.getElementById('p12').style.backgroundColor='red';
+                }
+            if(p13==(tab[2][2])){
+                    document.getElementById('p13').style.backgroundColor='green';
+                }
+                else{
+                    document.getElementById('p13').style.backgroundColor='red';
+                }
+            if(p14==(tab[2][4])){
+                    document.getElementById('p14').style.backgroundColor='green';
+                }
+                else{
+                    document.getElementById('p14').style.backgroundColor='red';
+                }
+            if(p15==(tab[2][5])){
+                    document.getElementById('p15').style.backgroundColor='green';
+                }
+                else{
+                    document.getElementById('p15').style.backgroundColor='red';
+                }
+            if(p16==(tab[2][6])){
+                    document.getElementById('p16').style.backgroundColor='green';
+                }
+                else{
+                    document.getElementById('p16').style.backgroundColor='red';
+                }
+            if(p17==(tab[2][7])){
+                    document.getElementById('p17').style.backgroundColor='green';
+                }
+                else{
+                    document.getElementById('p17').style.backgroundColor='red';
+                }
+            if(p18==(tab[2][8])){
+                    document.getElementById('p18').style.backgroundColor='green';
+                }
+                else{
+                    document.getElementById('p18').style.backgroundColor='red';
+                }
+            if(p19==(tab[3][1])){
+                    document.getElementById('p19').style.backgroundColor='green';
+                }
+                else{
+                    document.getElementById('p19').style.backgroundColor='red';
+                }
+                if(p20==(tab[3][2])){
+                    document.getElementById('p20').style.backgroundColor='green';
+                }
+                else{
+                    document.getElementById('p20').style.backgroundColor='red';
+                }
+                if(p21==(tab[3][3])){
+                    document.getElementById('p21').style.backgroundColor='green';
+                }
+                else{
+                    document.getElementById('p21').style.backgroundColor='red';
+                }
+                if(p22==(tab[3][4])){
+                    document.getElementById('p22').style.backgroundColor='green';
+                }
+                else{
+                    document.getElementById('p22').style.backgroundColor='red';
+                }
+                if(p23==(tab[3][5])){
+                    document.getElementById('p23').style.backgroundColor='green';
+                }
+                else{
+                    document.getElementById('p23').style.backgroundColor='red';
+                }
+                if(p24==(tab[3][6])){
+                    document.getElementById('p24').style.backgroundColor='green';
+                }
+                else{
+                    document.getElementById('p24').style.backgroundColor='red';
+                }
+                if(p25==(tab[3][7])){
+                    document.getElementById('p25').style.backgroundColor='green';
+                }
+                else{
+                    document.getElementById('p25').style.backgroundColor='red';
+                }
+                if(p26==(tab[3][8])){
+                    document.getElementById('p26').style.backgroundColor='green';
+                }
+                else{
+                    document.getElementById('p26').style.backgroundColor='red';
+                }
+                if(p27==(tab[4][3])){
+                    document.getElementById('p27').style.backgroundColor='green';
+                }
+                else{
+                    document.getElementById('p27').style.backgroundColor='red';
+                }
+                if(p28==(tab[4][4])){
+                    document.getElementById('p28').style.backgroundColor='green';
+                }
+                else{
+                    document.getElementById('p28').style.backgroundColor='red';
+                }
+                if(p29==(tab[4][5])){
+                    document.getElementById('p29').style.backgroundColor='green';
+                }
+                else{
+                    document.getElementById('p29').style.backgroundColor='red';
+                }
+                if(p30==(tab[5][0])){
+                    document.getElementById('p30').style.backgroundColor='green';
+                }
+                else{
+                    document.getElementById('p30').style.backgroundColor='red';
+                }
+                if(p31==(tab[5][1])){
+                    document.getElementById('p31').style.backgroundColor='green';
+                }
+                else{
+                    document.getElementById('p31').style.backgroundColor='red';
+                }
+                if(p32==(tab[5][2])){
+                    document.getElementById('p32').style.backgroundColor='green';
+                }
+                else{
+                    document.getElementById('p32').style.backgroundColor='red';
+                }
+                if(p33==(tab[5][3])){
+                    document.getElementById('p33').style.backgroundColor='green';
+                }
+                else{
+                    document.getElementById('p33').style.backgroundColor='red';
+                }
+                if(p34==(tab[5][4])){
+                    document.getElementById('p34').style.backgroundColor='green';
+                }
+                else{
+                    document.getElementById('p34').style.backgroundColor='red';
+                }
+                if(p35==(tab[5][5])){
+                    document.getElementById('p35').style.backgroundColor='green';
+                }
+                else{
+                    document.getElementById('p35').style.backgroundColor='red';
+                }
+                if(p36==(tab[5][6])){
+                    document.getElementById('p36').style.backgroundColor='green';
+                }
+                else{
+                    document.getElementById('p36').style.backgroundColor='red';
+                }
+                if(p37==(tab[5][7])){
+                    document.getElementById('p37').style.backgroundColor='green';
+                }
+                else{
+                    document.getElementById('p37').style.backgroundColor='red';
+                }
+                if(p38==(tab[6][0])){
+                    document.getElementById('p38').style.backgroundColor='green';
+                }
+                else{
+                    document.getElementById('p38').style.backgroundColor='red';
+                }
+                if(p39==(tab[6][1])){
+                    document.getElementById('p39').style.backgroundColor='green';
+                }
+                else{
+                    document.getElementById('p39').style.backgroundColor='red';
+                }
+                if(p40==(tab[6][2])){
+                    document.getElementById('p40').style.backgroundColor='green';
+                }
+                else{
+                    document.getElementById('p40').style.backgroundColor='red';
+                }
+                if(p41==(tab[6][3])){
+                    document.getElementById('p41').style.backgroundColor='green';
+                }
+                else{
+                    document.getElementById('p41').style.backgroundColor='red';
+                }
+                if(p42==(tab[6][4])){
+                    document.getElementById('p42').style.backgroundColor='green';
+                }
+                else{
+                    document.getElementById('p42').style.backgroundColor='red';
+                }
+                if(p43==(tab[6][6])){
+                    document.getElementById('p43').style.backgroundColor='green';
+                }
+                else{
+                    document.getElementById('p43').style.backgroundColor='red';
+                }
+                if(p44==(tab[6][7])){
+                    document.getElementById('p44').style.backgroundColor='green';
+                }
+                else{
+                    document.getElementById('p44').style.backgroundColor='red';
+                }
+                if(p45==(tab[7][1])){
+                    document.getElementById('p45').style.backgroundColor='green';
+                }
+                else{
+                    document.getElementById('p45').style.backgroundColor='red';
+                }
+                if(p46==(tab[7][4])){
+                    document.getElementById('p46').style.backgroundColor='green';
+                }
+                else{
+                    document.getElementById('p46').style.backgroundColor='red';
+                }
+                if(p47==(tab[7][5])){
+                    document.getElementById('p47').style.backgroundColor='green';
+                }
+                else{
+                    document.getElementById('p47').style.backgroundColor='red';
+                }
+                if(p48==(tab[7][6])){
+                    document.getElementById('p48').style.backgroundColor='green';
+                }
+                else{
+                    document.getElementById('p48').style.backgroundColor='red';
+                }
+                if(p49==(tab[7][7])){
+                    document.getElementById('p49').style.backgroundColor='green';
+                }
+                else{
+                    document.getElementById('p49').style.backgroundColor='red';
+                }
+                if(p50==(tab[7][8])){
+                    document.getElementById('p50').style.backgroundColor='green';
+                }
+                else{
+                    document.getElementById('p50').style.backgroundColor='red';
+                }
+                if(p51==(tab[8][0])){
+                    document.getElementById('p51').style.backgroundColor='green';
+                }
+                else{
+                    document.getElementById('p51').style.backgroundColor='red';
+                }
+                if(p52==(tab[8][2])){
+                    document.getElementById('p52').style.backgroundColor='green';
+                }
+                else{
+                    document.getElementById('p52').style.backgroundColor='red';
+                }
+                if(p53==(tab[8][6])){
+                    document.getElementById('p53').style.backgroundColor='green';
+                }
+                else{
+                    document.getElementById('p53').style.backgroundColor='red';
+                }
+                if(p54==(tab[8][7])){
+                    document.getElementById('p54').style.backgroundColor='green';
+                }
+                else{
+                    document.getElementById('p54').style.backgroundColor='red';
+                }
+                if(p55==(tab[8][8])){
+                    document.getElementById('p55').style.backgroundColor='green';
+                }
+                else{
+                    document.getElementById('p55').style.backgroundColor='red';
+                }
+
+        }
+        </script>
+    </head>
+    <body>
+        <form>
+        <table>
+            <tr>
+                <td class="dl pr"><input type="number" min=1 max=9 id="p1"></td>
+                <td class="dl pr"><input type="number" min=1 max=9 id="p2"></td>
+                <td class="dl pr lwb"><input type="number" min=1 max=9 id="p3"></td>
+                <td class="dl pr">8</td>
+                <td class="dl pr">3</td>
+                <td class="dl pr lwb">2</td>
+                <td class="dl pr"><input type="number" min=1 max=9 id="p4"></td>
+                <td class="dl pr">9</td>
+                <td class="dl"><input type="number" min=1 max=9 id="p5"></td>
+            </tr>
+
+            <tr>
+                <td class="dl pr"><input type="number" min=1 max=9 id="p6"></td>
+                <td class="dl pr"><input type="number" min=1 max=9 id="p7"></td>
+                <td class="dl pr lwb"><input type="number" min=1 max=9 id="p8"></td>
+                <td class="dl pr"><input type="number" min=1 max=9 id="p9"></td>
+                <td class="dl pr"><input type="number" min=1 max=9 id="p10"></td>
+                <td class="dl pr lwb">5</td>
+                <td class="dl pr">7</td>
+                <td class="dl pr"><input type="number" min=1 max=9 id="p11"></td>
+                <td class="dl pr>">6</td>
+            </tr>
+
+            <tr class="tr21">
+                <td class="dl pr">1</td>
+                <td class="dl pr"><input type="number" min=1 max=9 id="p12"></td>
+                <td class="dl pr lwb"><input type="number" min=1 max=9 id="p13"></td>
+                <td class="dl pr">6</td>
+                <td class="dl pr"><input type="number" min=1 max=9 id="p14"></td>
+                <td class="dl pr lwb"><input type="number" min=1 max=9 id="p15"></td>
+                <td class="dl pr"><input type="number" min=1 max=9 id="p16"></td>
+                <td class="dl pr"><input type="number" min=1 max=9 id="p17"></td>
+                <td class="dl pr>"><input type="number" min=1 max=9 id="p18"></td>
+            </tr>
+
+            <tr>
+                <td class="dl pr">3</td>
+                <td class="dl pr"><input type="number" min=1 max=9 id="p19"></td>
+                <td class="dl pr lwb"><input type="number" min=1 max=9 id="p20"></td>
+                <td class="dl pr"><input type="number" min=1 max=9 id="p21"></td>
+                <td class="dl pr"><input type="number" min=1 max=9 id="p22"></td>
+                <td class="dl pr lwb"><input type="number" min=1 max=9 id="p23"></td>
+                <td class="dl pr"><input type="number" min=1 max=9 id="p24"></td>
+                <td class="dl pr"><input type="number" min=1 max=9 id="p25"></td>
+                <td class="dl"><input type="number" min=1 max=9 id="p26"></td>
+            </tr>
+
+            <tr>
+                <td class="dl pr">6</td>
+                <td class="dl pr">7</td>
+                <td class="dl pr lwb">4</td>
+                <td class="dl pr"><input type="number" min=1 max=9 id="p27"></td>
+                <td class="dl pr"><input type="number" min=1 max=9 id="p28"></td>
+                <td class="dl pr lwb"><input type="number" min=1 max=9 id="p29"></td>
+                <td class="dl pr">8</td>
+                <td class="dl pr">5</td>
+                <td class="dl pr>">1</td>
+            </tr>
+
+            <tr class="tr21">
+                <td class="dl pr"><input type="number" min=1 max=9 id="p30"></td>
+                <td class="dl pr"><input type="number" min=1 max=9 id="p31"></td>
+                <td class="dl pr lwb"><input type="number" min=1 max=9 id="p32"></td>
+                <td class="dl pr"><input type="number" min=1 max=9 id="p33"></td>
+                <td class="dl pr"><input type="number" min=1 max=9 id="p34"></td>
+                <td class="dl pr lwb"><input type="number" min=1 max=9 id="p35"></td>
+                <td class="dl pr"><input type="number" min=1 max=9 id="p36"></td>
+                <td class="dl pr"><input type="number" min=1 max=9 id="p37"></td>
+                <td class="dl pr>">7</td>
+            </tr>
+            
+            <tr>
+                <td class="dl pr"><input type="number" min=1 max=9 id="p38"></td>
+                <td class="dl pr"><input type="number" min=1 max=9 id="p39"></td>
+                <td class="dl pr lwb"><input type="number" min=1 max=9 id="p40"></td>
+                <td class="dl pr"><input type="number" min=1 max=9 id="p41"></td>
+                <td class="dl pr"><input type="number" min=1 max=9 id="p42"></td>
+                <td class="dl pr lwb">1</td>
+                <td class="dl pr"><input type="number" min=1 max=9 id="p43"></td>
+                <td class="dl pr"><input type="number" min=1 max=9 id="p44"></td>
+                <td class="dl">5</td>
+            </tr>
+
+            <tr>
+                <td class="dl pr">9</td>
+                <td class="dl pr"><input type="number" min=1 max=9 id="p45"></td>
+                <td class="dl pr lwb">2</td>
+                <td class="dl pr">5</td>
+                <td class="dl pr"><input type="number" min=1 max=9 id="p46"></td>
+                <td class="dl pr lwb"><input type="number" min=1 max=9 id="p47"></td>
+                <td class="dl pr"><input type="number" min=1 max=9 id="p48"></td>
+                <td class="dl pr"><input type="number" min=1 max=9 id="p49"></td>
+                <td class="dl pr>"><input type="number" min=1 max=9 id="p50"></td>
+            </tr>
+
+            <tr>
+                <td class="dl pr"><input type="number" min=1 max=9 id="p51"></td>
+                <td class="dl pr">3</td>
+                <td class="dl pr lwb"><input type="number" min=1 max=9 id="p52"></td>
+                <td class="dl pr">2</td>
+                <td class="dl pr">7</td>
+                <td class="dl pr lwb">6</td>
+                <td class="dl pr"><input type="number" min=1 max=9 id="p53"></td>
+                <td class="dl pr"><input type="number" min=1 max=9 id="p54"></td>
+                <td class="dl pr>"><input type="number" min=1 max=9 id="p55"></td>
+            </tr>
+        </table>
+        <input type="button" value="sprawdz" onclick="sprawdz()" id="s2">
+    </form>
+    </body>
+</html>
